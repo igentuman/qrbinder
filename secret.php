@@ -5,7 +5,7 @@ include 'backend/funcs.php';
 <html>
 <head>
 <meta charset="UTF-8" />
-<title>iOS binder - Секретная страница</title>
+<title> Секретная страница</title>
 </head>
 <body>
 <?php

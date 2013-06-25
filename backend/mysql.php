@@ -4,7 +4,7 @@ class MySql {
     private $_host = 'localhost';
     private $_user = 'root';
     private $_password = '';
-    private $_db = 'qrbind';
+    private $_db = 'qrbinder';
     private $_connection = null;
 
     private function _connect()
@@ -42,6 +42,8 @@ class MySql {
         $this->_connect();
         if(!$this->_connection) return false;
         $result = mysql_query($query, $this->_connection);
+        if($result)
+           return  mysql_insert_id();
         return $result;
     }
 

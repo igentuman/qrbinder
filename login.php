@@ -34,13 +34,19 @@ if(!$login_id) {
 <html>
 <head>
 <meta charset="UTF-8" />
-<title>iOS binder - Авторизация</title>
+<title>Авторизация</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 </head>
 <body>
+<h2>Отсканируйте код ранее привязанным устройством</h2>
 
 <img src="http://chart.apis.google.com/chart?chs=250x250&cht=qr&chld=1/1&choe=utf-8&chl=<?php echo $rootUrl?>backend/loginer.php?uid=<?php echo $login_id?>"/>
-
+<h3>Или классический вход</h3>
+<form action="backend/manual.php" method="post">
+    <label for="mail" style="margin-right: 9px">Почта</label><input type="text" name="mail" id="mail"/><br />
+    <label for="password">Пароль</label><input type="password" name="password" id="password"/><br />
+    <input type="submit" value="Войти"/>
+</form>
 <script type="text/javascript">
     bindedFlg = false;
     setInterval(function(){

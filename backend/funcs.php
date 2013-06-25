@@ -1,7 +1,7 @@
 <?php
 include 'mysql.php';
 
-$rootUrl = 'http://localhost/qrbind/';
+$rootUrl = 'http://igentu.com/qrbind/';
 
 
 function loguot()
